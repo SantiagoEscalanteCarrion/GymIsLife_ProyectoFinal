@@ -8,6 +8,7 @@ import com.example.gymislife_proyectofinal.models.ClienteModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,7 +65,7 @@ class RegisterActivity : AppCompatActivity() {
 
                 dbU.createUserWithEmailAndPassword(dni, contraseña).addOnCompleteListener{
                     val user: FirebaseUser? = dbU.getCurrentUser()
-                    val idUser: String = user!!.uid
+                    val id: UUID = UUID.randomUUID()
                     val datosCliente = ClienteModel(
                         nombre,
                         apellido,
@@ -75,7 +76,7 @@ class RegisterActivity : AppCompatActivity() {
                         dni,
                         contraseña
                     )
-                    db.collection("Clientes").document(idUser).set(datosCliente)
+                    db.collection("Clientes").document(id.toString()).set(datosCliente)
                         .addOnSuccessListener {
                             Toast.makeText(this, "Registro cliente exitoso", Toast.LENGTH_LONG).show()
                             val intent = Intent(this, LoginActivity::class.java)

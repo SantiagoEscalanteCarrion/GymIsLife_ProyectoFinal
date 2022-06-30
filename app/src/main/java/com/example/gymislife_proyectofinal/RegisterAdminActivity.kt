@@ -9,6 +9,7 @@ import com.example.gymislife_proyectofinal.models.ClienteModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 
 class RegisterAdminActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,7 +70,7 @@ class RegisterAdminActivity : AppCompatActivity() {
 
                 dbU.createUserWithEmailAndPassword(dni, contraseña).addOnCompleteListener{
                     val user: FirebaseUser? = dbU.getCurrentUser()
-                    val idUser: String = user!!.uid
+                    val id: UUID = UUID.randomUUID()
                     val datosAdmin = AdminModel(
                         nombre,
                         apellido,
@@ -81,7 +82,7 @@ class RegisterAdminActivity : AppCompatActivity() {
                         dni,
                         contraseña
                     )
-                    db.collection("PersonalAdministrativo").document(idUser).set(datosAdmin)
+                    db.collection("PersonalAdministrativo").document(id.toString()).set(datosAdmin)
                         .addOnSuccessListener {
                             Toast.makeText(this, "Registro personal administrativo exitoso", Toast.LENGTH_LONG).show()
                             val intent = Intent(this, LoginActivity::class.java)
