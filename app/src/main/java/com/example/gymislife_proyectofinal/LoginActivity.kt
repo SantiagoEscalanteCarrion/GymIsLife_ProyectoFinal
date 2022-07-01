@@ -46,8 +46,12 @@ class LoginActivity : AppCompatActivity() {
                 .addOnSuccessListener { documents->
                     if(documents.isEmpty){
                         Toast.makeText(this,"Usuario NO existe", Toast.LENGTH_LONG).show()
-                    }   else
-                        Toast.makeText(this,"Usuario SI existe", Toast.LENGTH_LONG).show()
+                    }else{
+                        Toast.makeText(this,"ACCESO CONCEDIDO", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this,MainActivity::class.java)
+                        startActivity(intent)
+                    }
+
 
                 }
 
