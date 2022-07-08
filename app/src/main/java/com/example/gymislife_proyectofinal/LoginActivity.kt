@@ -44,7 +44,21 @@ class LoginActivity : AppCompatActivity() {
                 .get()
                 .addOnSuccessListener { documents->
                     if(documents.isEmpty){
-                        Toast.makeText(this,"Usuario NO existe", Toast.LENGTH_LONG).show()
+                        var doc = dbFirestore.collection("PersonalAdministrativo")
+                            .whereEqualTo("DNI",dni).whereEqualTo("Contraseña",password)
+                            .get()
+                            .addOnSuccessListener { documents->
+                                if(documents.isEmpty){
+                                    Toast.makeText(this,"Usuario NO existe", Toast.LENGTH_LONG).show()
+                                }else{
+                                    Toast.makeText(this,"ACCESO CONCEDIDO", Toast.LENGTH_LONG).show()
+                                    val intent = Intent(this,MainActivityPersonalAdmin::class.java)
+                                    intent.putExtra("DNI", dni)
+                                    startActivity(intent)
+                                }
+
+
+                            }
                     }else{
                         Toast.makeText(this,"ACCESO CONCEDIDO", Toast.LENGTH_LONG).show()
                         val intent = Intent(this,MainActivityCliente::class.java)
@@ -56,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
                 }
 
 
-            Log.d("Document", document.toString())
+
             /*dbFirestore.collection("Clientes")
                 .addSnapshotListener{snapshots, e->
                     if(e!=null){
