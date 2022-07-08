@@ -27,7 +27,8 @@
         android:layout_height="169dp"
         android:layout_marginTop="0dp"
         app:srcCompat="@drawable/fondologin"
-        tools:src="@drawable/fondologin" />
+        tools:src="@drawable/fondologin"
+        tools:srcCompat="@drawable/fondologin" />
 
     <EditText
         android:id="@+id/txtDniLogin"

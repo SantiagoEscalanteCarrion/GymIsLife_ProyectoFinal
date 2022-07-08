@@ -28,7 +28,7 @@
         android:layout_marginTop="15px"
         android:layout_marginRight="20px"
         android:text="INGRESE LOS DATOS SOLICITADOS:"
-        android:textColor="#000000"
+        android:textColor="#99E110"
         android:textSize="24sp" />
 
     <EditText
