@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivityCliente">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="BIENVENIDO A GYM IS LIFE"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="73dp"
+        android:text="¿Qué desea hacer?"
+        android:textColor="#2196F3"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnIscripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="125px"
+        android:layout_marginRight="125px"
+        android:layout_marginBottom="30dp"
+        android:text="INSCRIPCIÓN A ACTIVIDADES" />
+
+    <Button
+        android:id="@+id/btnMembresia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="125px"
+        android:layout_marginRight="125px"
+        android:layout_marginBottom="50dp"
+        android:text="ADQUIRIR MEMBRESÍA" />
+
+    <Button
+        android:id="@+id/btnPerfilCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="125px"
+        android:layout_marginRight="125px"
+        android:layout_marginBottom="190dp"
+        android:text="VISUALIZAR PERFIL" />
+</LinearLayout>

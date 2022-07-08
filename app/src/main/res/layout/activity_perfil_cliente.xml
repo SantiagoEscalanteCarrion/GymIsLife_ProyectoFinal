@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PerfilCliente">
+
+    <ImageView
+        android:id="@+id/ivPerfilCliente"
+        android:layout_width="170dp"
+        android:layout_height="164dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvNombCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@drawable/perfilcliente" />
+
+    <TextView
+        android:id="@+id/tvNombCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="274dp"
+        android:layout_marginEnd="84dp"
+        android:text="Nombre:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/etNombCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvApellCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Apellido:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tvNombCliente"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombCliente" />
+
+    <TextView
+        android:id="@+id/tvDNICliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="18dp"
+        android:text="DNI:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tvApellCliente"
+        app:layout_constraintTop_toBottomOf="@+id/tvApellCliente" />
+
+    <TextView
+        android:id="@+id/tvDirecCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Dirección:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvDNICliente"
+        app:layout_constraintStart_toEndOf="@+id/tvDNICliente"
+        app:layout_constraintTop_toBottomOf="@+id/tvDNICliente" />
+
+    <TextView
+        android:id="@+id/tvEmailCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="18dp"
+        android:text="email:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tvDirecCliente"
+        app:layout_constraintTop_toBottomOf="@+id/tvDirecCliente" />
+
+    <TextView
+        android:id="@+id/tvGenCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="18dp"
+        android:text="Género:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailCliente" />
+
+    <TextView
+        android:id="@+id/tvTelfCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Teléfono:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tvGenCliente"
+        app:layout_constraintTop_toBottomOf="@+id/tvGenCliente" />
+
+    <TextView
+        android:id="@+id/tvContraCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="Contraseña:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tvTelfCliente"
+        app:layout_constraintTop_toBottomOf="@+id/tvTelfCliente" />
+
+    <EditText
+        android:id="@+id/etNombCliente"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="274dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="337dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEditarPerfCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvNombCliente"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etApellCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvDirecCliente"
+        app:layout_constraintStart_toStartOf="@+id/etNombCliente"
+        app:layout_constraintTop_toTopOf="@+id/tvNombCliente" />
+
+    <EditText
+        android:id="@+id/etDNICliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/etApellCliente"
+        app:layout_constraintTop_toBottomOf="@+id/etApellCliente" />
+
+    <EditText
+        android:id="@+id/etDirecCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/etDNICliente"
+        app:layout_constraintTop_toBottomOf="@+id/etDNICliente" />
+
+    <EditText
+        android:id="@+id/etEmailCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/etDirecCliente"
+        app:layout_constraintTop_toBottomOf="@+id/etDirecCliente" />
+
+    <EditText
+        android:id="@+id/etGenCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/etEmailCliente"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailCliente" />
+
+    <EditText
+        android:id="@+id/etTelfCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/etGenCliente"
+        app:layout_constraintTop_toBottomOf="@+id/etGenCliente" />
+
+    <EditText
+        android:id="@+id/etContraCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/etTelfCliente"
+        app:layout_constraintTop_toBottomOf="@+id/etTelfCliente" />
+
+    <Button
+        android:id="@+id/btnEditarPerfCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Editar Perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

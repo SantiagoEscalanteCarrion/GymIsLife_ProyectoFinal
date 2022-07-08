@@ -21,7 +21,17 @@
         tools:layout="@layout/activity_resgister_admin_personal" />
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.example.gymislife_proyectofinal.MainActivity"
+        android:name="com.example.gymislife_proyectofinal.MainActivityCliente"
         android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+        tools:layout="@layout/activity_main_cliente" />
+    <activity
+        android:id="@+id/catalogoMembresia"
+        android:name="com.example.gymislife_proyectofinal.CatalogoMembresia"
+        android:label="activity_catalogo_membresia"
+        tools:layout="@layout/activity_catalogo_membresia" />
+    <activity
+        android:id="@+id/listadoActividadCliente"
+        android:name="com.example.gymislife_proyectofinal.ListadoActividadCliente"
+        android:label="activity_listado_actividad_cliente"
+        tools:layout="@layout/activity_listado_actividad_cliente" />
 </navigation>

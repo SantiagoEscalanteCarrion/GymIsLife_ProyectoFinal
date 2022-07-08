@@ -7,7 +7,6 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -48,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this,"Usuario NO existe", Toast.LENGTH_LONG).show()
                     }else{
                         Toast.makeText(this,"ACCESO CONCEDIDO", Toast.LENGTH_LONG).show()
-                        val intent = Intent(this,MainActivity::class.java)
+                        val intent = Intent(this,MainActivityCliente::class.java)
                         startActivity(intent)
                     }
 

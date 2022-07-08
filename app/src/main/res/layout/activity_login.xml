@@ -51,7 +51,7 @@
         android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="Ingrese su contraseña"
-        android:inputType="textPassword"
+        android:inputType="number|textPassword"
         android:minHeight="48dp"
         android:password="true"
         android:textAlignment="center" />

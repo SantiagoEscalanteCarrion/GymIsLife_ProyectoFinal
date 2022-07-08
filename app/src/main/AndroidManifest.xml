@@ -10,12 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymIsLife_ProyectoFinal">
         <activity
+            android:name=".PerfilCliente"
+            android:exported="false" />
+        <activity
+            android:name=".CatalogoMembresia"
+            android:exported="false" />
+        <activity
+            android:name=".ListadoActividadCliente"
+            android:exported="false" />
+        <activity
             android:name=".fragments.PrincipalActivity"
             android:exported="false"
             android:label="@string/title_activity_principal"
             android:theme="@style/Theme.GymIsLife_ProyectoFinal.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityCliente"
             android:exported="false"
             android:label="@string/title_activity_main_acticity"
             android:theme="@style/Theme.GymIsLife_ProyectoFinal.NoActionBar" />
