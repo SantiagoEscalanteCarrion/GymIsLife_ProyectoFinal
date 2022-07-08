@@ -48,6 +48,7 @@ class LoginActivity : AppCompatActivity() {
                     }else{
                         Toast.makeText(this,"ACCESO CONCEDIDO", Toast.LENGTH_LONG).show()
                         val intent = Intent(this,MainActivityCliente::class.java)
+                        intent.putExtra("DNI", dni)
                         startActivity(intent)
                     }
 
