@@ -1,5 +1,6 @@
 package com.example.gymislife_proyectofinal
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,38 +9,31 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gymislife_proyectofinal.adapter.ActivityClienteAdapter
 import com.example.gymislife_proyectofinal.adapter.MembresiaAdapter
-import com.example.gymislife_proyectofinal.models.ActividadModel
 import com.example.gymislife_proyectofinal.models.MembresiaModel
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
 
 class CatalogoMembresia : AppCompatActivity() {
-    override fun onCreate(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View?{
+    override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catalogo_membresia)
 
-        val view: View = inflater.inflate(R.layout.activity_catalogo_membresia, container, false)
+
         val db = FirebaseFirestore.getInstance()
 
         val lstMembresia: ArrayList<MembresiaModel> = ArrayList()
-        val rvMembresia: RecyclerView = view.findViewById(R.id.rvMembresia)
-        val btnPagar: Button = view.findViewById(R.id.btnPagar)
-        btnPagar.setOnClickListener{
-            Snackbar.make(btnPagar, "Continuar con la transacción", Snackbar.LENGTH_LONG)
-                .setAction("Cancel"){}
-                .show()
+        val rvMembresia: RecyclerView = findViewById(R.id.rvMembresia)
+        val btnBack: Button = findViewById(R.id.btnBackDos)
+        btnBack.setOnClickListener{
+            val intent = Intent(this,MainActivityCliente::class.java)
+            startActivity(intent)
         }
 
         db.collection("Membresía")
             .addSnapshotListener{snapshots, e->
                 if(e!=null){
-                    Snackbar.make(view, "Error al cargar MEMBRESÍAS", Snackbar.LENGTH_LONG).show()
                     return@addSnapshotListener
                 }
 
@@ -61,6 +55,5 @@ class CatalogoMembresia : AppCompatActivity() {
                 rvMembresia.layoutManager = LinearLayoutManager(this)
             }
 
-        return view
     }
 }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymIsLife_ProyectoFinal">
         <activity
+            android:name=".pruebita"
+            android:exported="false" />
+        <activity
             android:name=".PerfilCliente"
             android:exported="false" />
         <activity

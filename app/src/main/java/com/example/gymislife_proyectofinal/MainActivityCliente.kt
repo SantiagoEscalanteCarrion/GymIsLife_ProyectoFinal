@@ -19,5 +19,15 @@ class MainActivityCliente : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnMembresia.setOnClickListener{
+            val intent = Intent(this,CatalogoMembresia::class.java)
+            startActivity(intent)
+        }
+
+        btnPerfilCliente.setOnClickListener{
+            val intent = Intent(this,PerfilCliente::class.java)
+            startActivity(intent)
+        }
+
     }
 }

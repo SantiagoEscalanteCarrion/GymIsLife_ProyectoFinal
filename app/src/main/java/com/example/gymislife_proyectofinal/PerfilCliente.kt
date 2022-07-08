@@ -1,5 +1,6 @@
 package com.example.gymislife_proyectofinal
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,7 +22,13 @@ class PerfilCliente : AppCompatActivity() {
         val etTelfCliente: EditText = findViewById(R.id.etTelfCliente)
         val etContraCliente: EditText = findViewById(R.id.etContraCliente)
         val btnEditarPerfCliente: Button = findViewById(R.id.btnEditarPerfCliente)
+        val btnBack: Button = findViewById(R.id.btnBack3)
         var editing:Boolean = false
+
+        btnBack.setOnClickListener{
+            val intent = Intent(this,MainActivityCliente::class.java)
+            startActivity(intent)
+        }
 
         val db = FirebaseFirestore.getInstance()
 
