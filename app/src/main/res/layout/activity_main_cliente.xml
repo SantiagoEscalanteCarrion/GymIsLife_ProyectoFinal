@@ -26,7 +26,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="73dp"
+        android:layout_marginBottom="50dp"
         android:text="¿Qué desea hacer?"
         android:textColor="#2196F3"
         android:textSize="24sp" />
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="125px"
         android:layout_marginRight="125px"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:text="INSCRIPCIÓN A ACTIVIDADES" />
 
     <Button
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="125px"
         android:layout_marginRight="125px"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:text="ADQUIRIR MEMBRESÍA" />
 
     <Button

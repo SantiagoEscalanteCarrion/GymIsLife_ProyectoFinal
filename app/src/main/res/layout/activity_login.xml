@@ -25,7 +25,7 @@
         android:id="@+id/imageView"
         android:layout_width="255dp"
         android:layout_height="169dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="20px"
         app:srcCompat="@drawable/fondologin"
         tools:src="@drawable/fondologin"
         tools:srcCompat="@drawable/fondologin" />
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20px"
         android:layout_marginRight="20dp"
         android:ems="10"
         android:gravity="center"
@@ -48,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20px"
         android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="Ingrese su contraseña"
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20px"
         android:layout_marginRight="60dp"
         android:text="INICIAR SESIÓN" />
 
@@ -71,7 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20px"
         android:layout_marginRight="40dp"
         android:text="@string/valBtnRegistroCliente"
         app:rippleColor="#3F51B5" />
@@ -81,7 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="40dp"
         android:text="@string/valBtnRegistroPersonal"
         app:rippleColor="#3F51B5" />

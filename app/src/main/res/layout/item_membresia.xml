@@ -50,4 +50,13 @@
         app:layout_constraintStart_toEndOf="@+id/tvDurMemb"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btnPagar"
+        android:layout_width="93dp"
+        android:layout_height="35dp"
+        android:text="Pagar"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="301dp"
+        tools:layout_editor_absoluteY="72dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

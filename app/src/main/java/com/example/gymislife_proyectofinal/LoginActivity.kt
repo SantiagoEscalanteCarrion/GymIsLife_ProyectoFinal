@@ -44,6 +44,8 @@ class LoginActivity : AppCompatActivity() {
                 .get()
                 .addOnSuccessListener { documents->
                     if(documents.isEmpty){
+
+
                         var doc = dbFirestore.collection("PersonalAdministrativo")
                             .whereEqualTo("DNI",dni).whereEqualTo("Contraseña",password)
                             .get()
